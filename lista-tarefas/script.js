@@ -1,4 +1,3 @@
-
 const lista = document.getElementById('lista');
 const inputTarefa = document.getElementById('nova-tarefa');
 const inputData = document.getElementById('data-tarefa');
@@ -23,12 +22,10 @@ document.getElementById('adicionar').addEventListener('click', () => {
         inputTarefa.value = '';
         inputData.value = '';
 
-        // Marcar como concluída
         li.querySelector('.concluir').addEventListener('click', () => {
             li.classList.toggle('concluida');
         });
 
-        // Editar tarefa
         li.querySelector('.editar').addEventListener('click', () => {
             const novoTexto = prompt('Edite a tarefa:', li.querySelector('.tarefa-texto').textContent);
             const novaData = prompt('Edite a data (AAAA-MM-DD):', data);
@@ -41,7 +38,6 @@ document.getElementById('adicionar').addEventListener('click', () => {
             }
         });
 
-        // Excluir tarefa
         li.querySelector('.excluir').addEventListener('click', () => {
             lista.removeChild(li);
         });

@@ -10,10 +10,10 @@ document.getElementById('adivinhar').addEventListener('click', () => {
         resultado.textContent = `Parabéns! Você acertou em ${tentativas} tentativa(s).`;
         resultado.style.color = 'green';
     } else if (palpite < numeroSecreto) {
-        resultado.textContent = 'Muito baixo!';
+        resultado.textContent = 'Baixo!';
         resultado.style.color = 'orange';
     } else {
-        resultado.textContent = 'Muito alto!';
+        resultado.textContent = 'Alto!';
         resultado.style.color = 'orange';
     }
 });

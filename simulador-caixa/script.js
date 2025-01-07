@@ -1,6 +1,6 @@
 document.getElementById('calcular').addEventListener('click', () => {
     const valor = parseInt(document.getElementById('valor-saque').value, 10);
-    const cedulas = [100, 50, 20, 10];
+    const cedulas = [200, 100, 50, 20, 10, 5, 2, 1];
     let restante = valor;
     const resultado = document.getElementById('resultado');
 
@@ -8,11 +8,6 @@ document.getElementById('calcular').addEventListener('click', () => {
 
     if (!valor || valor <= 0) {
         resultado.textContent = 'Por favor, insira um valor válido.';
-        return;
-    }
-
-    if (valor % 10 !== 0) {
-        resultado.textContent = 'O valor deve ser múltiplo de 10.';
         return;
     }
 

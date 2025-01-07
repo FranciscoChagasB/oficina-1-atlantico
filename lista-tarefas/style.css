@@ -106,3 +106,8 @@ li button:hover {
 .home-button:hover {
     background-color: #5a6268;
 }
+
+.concluida .tarefa-texto {
+    text-decoration: line-through;
+    color: #6c757d;
+}

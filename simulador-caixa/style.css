@@ -52,6 +52,10 @@ button:hover {
     color: #333;
 }
 
+#resultado p {
+    margin: 5px 0;
+}
+
 .home-button {
     display: inline-block;
     margin-top: 20px;
