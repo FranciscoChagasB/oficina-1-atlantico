@@ -11,11 +11,15 @@ document.getElementById('adicionar').addEventListener('click', () => {
         const dataFormatada = new Date(data).toLocaleDateString('pt-BR');
 
         li.innerHTML = `
-          <span class="tarefa-texto">${tarefa}</span>
-          <span class="tarefa-data">(Realizar até: ${dataFormatada})</span>
-          <button class="concluir">Concluir</button>
-          <button class="editar">Editar</button>
-          <button class="excluir">Excluir</button>
+          <div>
+            <span class="tarefa-texto">${tarefa}</span>
+            <span class="tarefa-data">(Realizar até: ${dataFormatada})</span>
+          </div>
+          <div>
+            <button class="concluir">Concluir</button>
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
         `;
 
         lista.appendChild(li);
@@ -28,13 +32,13 @@ document.getElementById('adicionar').addEventListener('click', () => {
 
         li.querySelector('.editar').addEventListener('click', () => {
             const novoTexto = prompt('Edite a tarefa:', li.querySelector('.tarefa-texto').textContent);
-            const novaData = prompt('Edite a data (AAAA-MM-DD):', data);
+            const novaData = prompt('Edite a data (AAAA-MM-DD HH:mm):', data);
 
             if (novoTexto) {
                 li.querySelector('.tarefa-texto').textContent = novoTexto;
             }
             if (novaData) {
-                li.querySelector('.tarefa-data').textContent = `(Realizar até: ${new Date(novaData).toLocaleDateString('pt-BR')})`;
+                li.querySelector('.tarefa-data').textContent = `(Realizar até: ${new Date(novaData).toLocaleString('pt-BR')})`;
             }
         });
 

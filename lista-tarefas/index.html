@@ -11,10 +11,14 @@
 <body>
     <div class="container">
         <h1>Lista de Tarefas</h1>
-        <input type="text" id="nova-tarefa" placeholder="Digite uma nova tarefa">
-        <input type="date" id="data-tarefa" placeholder="Data para realizar">
-        <button id="adicionar">Adicionar</button>
-        <ul id="lista"></ul>
+        <div class="form-container">
+            <input type="text" id="nova-tarefa" placeholder="Digite uma nova tarefa">
+            <input type="datetime-local" id="data-tarefa">
+            <button id="adicionar">Adicionar</button>
+        </div>
+        <div class="lista-container">
+            <ul id="lista"></ul>
+        </div>
         <a href="../../index.html" class="home-button">Home</a>
     </div>
     <script src="script.js"></script>
